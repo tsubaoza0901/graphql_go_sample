@@ -16,7 +16,7 @@ $ docker exec -it graphql-go-sample bash
 ```
 
 ```
-root@fe385569a625:/go/app/src# go run main.go
+root@fe385569a625:/go/app/src# go run server.go
 ```
 
 ## 3.リクエスト画面
