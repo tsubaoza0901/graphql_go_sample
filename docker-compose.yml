@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  backend:
+    build:
+      context: ./docker_files/go
+      dockerfile: Dockerfile
+    container_name: graphql-go-sample
+    volumes:
+      - './backend:/go/app/src'
+    ports:
+      - '8850:8850'
+    tty: true
+    stdin_open: true
+    networks:
+      - default
