@@ -19,6 +19,19 @@ $ docker exec -it graphql-go-sample bash
 root@fe385569a625:/go/app/src# go run server.go
 ```
 
+# 内容更新方法
+
+Scheme等修正後、以下のコマンドを実行
+
+```
+root@fe385569a625:/go/app/src# go run github.com/99designs/gqlgen generate
+```
+※ 初回実行時、以下のライブラリを入れる必要がある可能性あり
+
+```
+root@fe385569a625:/go/app/src# go get -u github.com/99designs/gqlgen@v0.17.9
+```
+
 ## 3.リクエスト画面
 
 http://localhost:8850/
