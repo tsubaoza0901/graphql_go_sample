@@ -39,6 +39,9 @@ https://gqlgen.com/getting-started/
 
 ## 【その他】   
 
+・Qiita:GraphQLの全体像とWebApp開発のこれから   
+https://qiita.com/saboyutaka/items/171f7382cdf75b67d076   
+
 ・Qiita：GraphQLの便利なツール   
 https://qiita.com/NagaokaKenichi/items/f83148f4903b17d1d2f0   
 
