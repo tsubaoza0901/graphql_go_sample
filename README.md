@@ -24,12 +24,22 @@ root@fe385569a625:/go/app/src# go run server.go
 Scheme等修正後、以下のコマンドを実行
 
 ```
-root@fe385569a625:/go/app/src# go run github.com/99designs/gqlgen generate
+root@fe385569a625:/go/app/src# go get github.com/99designs/gqlgen
 ```
-※ 初回実行時、以下のライブラリを入れる必要がある可能性あり
 
 ```
-root@fe385569a625:/go/app/src# go get -u github.com/99designs/gqlgen@v0.17.9
+root@fe385569a625:/go/app/src# go generate ./...
+```
+
+※ 本来は以下のコマンドを実行するが、
+
+```
+root@fe385569a625:/go/app/src# go run github.com/99designs/gqlgen generate
+```
+resolver.goに以下の「go generate」コメントを入れているためgo generateコマンドで実行可能
+
+```
+//go:generate go run github.com/99designs/gqlgen generate
 ```
 
 ## 3.リクエスト画面
