@@ -26,9 +26,13 @@ http://localhost:8850/
 # 参考URL
 
 ## 【公式】
+・GraphQL   
+https://graphql.org/   
 
 ・SWAPI GraphQL API   
 https://graphql.org/swapi-graphql   
+
+### ライブラリ（フレームワーク）
 
 ・gqlgen：Getting Started   
 https://gqlgen.com/getting-started/   
