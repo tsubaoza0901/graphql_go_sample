@@ -12,20 +12,20 @@ import (
 	"github.com/tsubaoza0901/graphql_go_sample/graph/model"
 )
 
-func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
-	// panic(fmt.Errorf("not implemented"))
-	todo := &model.Todo{
+// CreateSchedule is the resolver for the createSchedule field.
+func (r *mutationResolver) CreateSchedule(ctx context.Context, input model.NewSchedule) (*model.Schedule, error) {
+	schedule := &model.Schedule{
 		Text: input.Text,
 		ID:   fmt.Sprintf("T%d", rand.Int()),
 		User: &model.User{ID: input.UserID, Name: "user " + input.UserID},
 	}
-	r.todos = append(r.todos, todo)
-	return todo, nil
+	r.schedules = append(r.schedules, schedule)
+	return schedule, nil
 }
 
-func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
-	// panic(fmt.Errorf("not implemented"))
-	return r.todos, nil
+// Schedules is the resolver for the schedules field.
+func (r *queryResolver) Schedules(ctx context.Context) ([]*model.Schedule, error) {
+	return r.schedules, nil
 }
 
 // Mutation returns generated.MutationResolver implementation.
